@@ -17,7 +17,8 @@ where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;
 
 The code solves the problem using the over-relaxed Chambolle-Pock algorithm [3, Algorithm 3.1] after obtaining a saddle-point problem [2, Example 5.6]
 
-## TGV denoising (TGVdenoise)
+## TGV denoising (TGVdenoise.m)
+TV regularisation only promotes piecewise constant
 
 ## References
 - [1] L. I. Rudin, S. Osher, and E. Fatemi, “Nonlinear total variation based noise removal algorithms,” _Physica D_, vol. 60, no. 1–4, pp. 259–268, 1992.
@@ -25,7 +26,7 @@ The code solves the problem using the over-relaxed Chambolle-Pock algorithm [3, 
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMDkxNjAzNyw2MDg0MzQ5MTAsLTE4Nz
+eyJoaXN0b3J5IjpbMTA3NzA1NjU1NCw2MDg0MzQ5MTAsLTE4Nz
 E0MzE1ODQsLTgwOTUwMDM1MCwtMTYwODcyOTY2NSwyMzQ0NzIx
 NDcsMjA0OTE5NTkxMiwxNTEyODYxNjU1LC0yMTQ3MzU1OCwtMT
 kwODYxNDcxMiwtMjY2Mjc0OTkxLDEzNjk5OTg1NzUsLTE3Njk2
