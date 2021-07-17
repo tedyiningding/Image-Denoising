@@ -34,7 +34,7 @@ The table below shows some quantitative results including the reconstructed sign
 | TV denoised  | 25.3879| 0.8702
 | TGV denoised | 25.3985| 0.8859
 
-The TGV method is only marginally higher in RSNR but there is no obvious staircasing artefact (see the background).
+The TGV method is only marginally higher in RSNR and SSIM but there is no obvious staircasing artefact (see the background).
 
 ## References
 - [1] L. I. Rudin, S. Osher, and E. Fatemi, “Nonlinear total variation based noise removal algorithms,” _Physica D_, vol. 60, no. 1–4, pp. 259–268, 1992.
@@ -42,11 +42,11 @@ The TGV method is only marginally higher in RSNR but there is no obvious stairca
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NDE2MDg5OCwtMzM3MTIwMTUxLC02MT
-M2NjA4OCwtNDAzMTE1Mjk3LC0yMDQ3NDk0MzkxLDYwODQzNDkx
-MCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNjA4NzI5NjY1LD
-IzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2NTUsLTIxNDcz
-NTU4LC0xOTA4NjE0NzEyLC0yNjYyNzQ5OTEsMTM2OTk5ODU3NS
-wtMTc2OTYxMTM3OSwtMTc1Nzg1OTA5MCwtMjQ2NjE3NzgyXX0=
+eyJoaXN0b3J5IjpbLTE1NjQ4NzE4MzUsLTMzNzEyMDE1MSwtNj
+EzNjYwODgsLTQwMzExNTI5NywtMjA0NzQ5NDM5MSw2MDg0MzQ5
+MTAsLTE4NzE0MzE1ODQsLTgwOTUwMDM1MCwtMTYwODcyOTY2NS
+wyMzQ0NzIxNDcsMjA0OTE5NTkxMiwxNTEyODYxNjU1LC0yMTQ3
+MzU1OCwtMTkwODYxNDcxMiwtMjY2Mjc0OTkxLDEzNjk5OTg1Nz
+UsLTE3Njk2MTEzNzksLTE3NTc4NTkwOTAsLTI0NjYxNzc4Ml19
 
 -->
