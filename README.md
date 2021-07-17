@@ -4,7 +4,7 @@ A collection of MATLAB scripts and functions which achieves image denoising base
 
 Some codes are adapted from [Laurent Condat's work](https://lcondat.github.io/software.html).
 
-## TV Denoising (TVdenoise.m)
+## TV Denoising
 Total Variation (TV) denoising (more specifically, we mean the ROF model [1]) finds the unique solution <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{x}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{x}^\star \in \mathbb{R}^{M \times N}" /> which minimises
 
 <img src="https://latex.codecogs.com/svg.latex?\large&space;\frac{1}{2}&space;\left\Vert&space;\mathbf{x}-\mathbf{y}&space;\right\Vert&space;^2&space;&plus;&space;\lambda&space;\left\Vert&space;\mathbf{x}&space;\right\Vert_{\text{TV}}" title="\large \frac{1}{2} \left\Vert \mathbf{x}-\mathbf{y} \right\Vert ^2 + \lambda \left\Vert \mathbf{x} \right\Vert_{\text{TV}}" />
@@ -17,8 +17,10 @@ where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;
 
 The [code](https://github.com/tedyiningding/Image-Denoising/blob/main/TVdenoise.m) solves the problem using the over-relaxed Chambolle-Pock algorithm [3, Algorithm 3.1] after obtaining a saddle-point problem [2, Example 5.6]
 
-## TGV denoising (TGVdenoise.m)
-TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the denoised images shown below). To combat this, Total Generalised Variation (TGV) was proposed in [4]. The second order TGV not only promotes piecewise constant, but also piecewise affine. It finds the unique solution <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{u}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{u}^\star \in \mathbb{R}^{M \times N}" /> (and an auxiliary variable <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{v}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{v}^\star \in \mathbb{R}^{M \times N \times 2}" /> ) which minimises
+## TGV denoising
+TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the denoised images shown below). To combat this, Total Generalised Variation (TGV) was proposed in [4]. The second order TGV not only promotes piecewise constant, but also piecewise affine. It finds the unique solution <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{u}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{u}^\star \in \mathbb{R}^{M \times N}" /> (and an auxiliary variable <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{v}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N&space;\times&space;2}" title="\large \mathbf{v}^\star \in \mathbb{R}^{M \times N \times 2}" />) which minimises
+
+
 
 ## Results
 The clear image | The noisy image
@@ -42,11 +44,11 @@ The TGV method is only marginally higher in RSNR and SSIM but there is no obviou
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgwOTQ0MTMyLDI5Mjg5MDE4NiwtMzM3MT
-IwMTUxLC02MTM2NjA4OCwtNDAzMTE1Mjk3LC0yMDQ3NDk0Mzkx
-LDYwODQzNDkxMCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNj
-A4NzI5NjY1LDIzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2
-NTUsLTIxNDczNTU4LC0xOTA4NjE0NzEyLC0yNjYyNzQ5OTEsMT
-M2OTk5ODU3NSwtMTc2OTYxMTM3OSwtMTc1Nzg1OTA5MCwtMjQ2
-NjE3NzgyXX0=
+eyJoaXN0b3J5IjpbLTE2NTU4MTAzNjksMjkyODkwMTg2LC0zMz
+cxMjAxNTEsLTYxMzY2MDg4LC00MDMxMTUyOTcsLTIwNDc0OTQz
+OTEsNjA4NDM0OTEwLC0xODcxNDMxNTg0LC04MDk1MDAzNTAsLT
+E2MDg3Mjk2NjUsMjM0NDcyMTQ3LDIwNDkxOTU5MTIsMTUxMjg2
+MTY1NSwtMjE0NzM1NTgsLTE5MDg2MTQ3MTIsLTI2NjI3NDk5MS
+wxMzY5OTk4NTc1LC0xNzY5NjExMzc5LC0xNzU3ODU5MDkwLC0y
+NDY2MTc3ODJdfQ==
 -->
