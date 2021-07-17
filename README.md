@@ -27,7 +27,7 @@ The clear image | The noisy image
 TV denoised image | TGV denoised image
 ![clear](https://github.com/tedyiningding/Image-Denoising/blob/main/images/TVdenoised_gray.png?raw=true) | ![noisy](https://github.com/tedyiningding/Image-Denoising/blob/main/images/TGVdenoised_gray.png?raw=true)
 
-The table below shows some quantitative results.
+The table below shows some quantitative results including the reconstructed signal-to-noise ratio (RSNR) and the structural similarity index measure (SSIM).
 |  Images | RSNR (dB) | SSIM |
 | - | - | - |
 | Noisy        | 14.1727| 0.1949
@@ -42,7 +42,7 @@ The TGV method is only marginally higher in RSNR but there is no obvious stairca
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwODczMjA0MiwtMzM3MTIwMTUxLC02MT
+eyJoaXN0b3J5IjpbLTM3NDE2MDg5OCwtMzM3MTIwMTUxLC02MT
 M2NjA4OCwtNDAzMTE1Mjk3LC0yMDQ3NDk0MzkxLDYwODQzNDkx
 MCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNjA4NzI5NjY1LD
 IzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2NTUsLTIxNDcz
