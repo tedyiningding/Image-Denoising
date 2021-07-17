@@ -18,7 +18,7 @@ where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;
 The code solves the problem using the over-relaxed Chambolle-Pock algorithm [3, Algorithm 3.1] after obtaining a saddle-point problem [2, Example 5.6]
 
 ## TGV denoising (TGVdenoise.m)
-TV regularisation only promotes piecewise constant therefore 
+TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the results shown below). 
 
 ## Results
 
@@ -29,9 +29,9 @@ TV regularisation only promotes piecewise constant therefore
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQwMDQxNzUyLDYwODQzNDkxMCwtMTg3MT
-QzMTU4NCwtODA5NTAwMzUwLC0xNjA4NzI5NjY1LDIzNDQ3MjE0
-NywyMDQ5MTk1OTEyLDE1MTI4NjE2NTUsLTIxNDczNTU4LC0xOT
-A4NjE0NzEyLC0yNjYyNzQ5OTEsMTM2OTk5ODU3NSwtMTc2OTYx
-MTM3OSwtMTc1Nzg1OTA5MCwtMjQ2NjE3NzgyXX0=
+eyJoaXN0b3J5IjpbLTIwNDc0OTQzOTEsNjA4NDM0OTEwLC0xOD
+cxNDMxNTg0LC04MDk1MDAzNTAsLTE2MDg3Mjk2NjUsMjM0NDcy
+MTQ3LDIwNDkxOTU5MTIsMTUxMjg2MTY1NSwtMjE0NzM1NTgsLT
+E5MDg2MTQ3MTIsLTI2NjI3NDk5MSwxMzY5OTk4NTc1LC0xNzY5
+NjExMzc5LC0xNzU3ODU5MDkwLC0yNDY2MTc3ODJdfQ==
 -->
