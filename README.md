@@ -15,7 +15,7 @@ where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;
 
 where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathrm{D}:&space;\mathbb{R}^{M&space;\times&space;N}&space;\rightarrow&space;\mathbb{R}^{M&space;\times&space;N&space;\times&space;2}" title="\large \mathrm{D}: \mathbb{R}^{M \times N} \rightarrow \mathbb{R}^{M \times N \times 2}" /> is the discrete gradient operator. That is, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\left\Vert&space;\cdot&space;\right\Vert_{\text{TV}}" title="\large \left\Vert \cdot \right\Vert_{\text{TV}}" /> is the <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\ell_1" title="\large \ell_1" />-norm  of the <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;p" title="\large p" />-norm of the pixelwise image gradients [2, pp. 168]. When <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;p=1" title="\large p=1" /> it is called the anisotropic TV, whereas when <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;p=2" title="\large p=2" /> it is called the isotropic TV. The code uses the latter.
 
-The code solves the problem using the over-relaxed Chambolle-Pock algorithm [3, Algorithm 3.1] after obtaining a saddle-point problem [2, Example 5.6]
+The [code](https://github.com/tedyiningding/Image-Denoising/blob/main/TVdenoise.m) solves the problem using the over-relaxed Chambolle-Pock algorithm [3, Algorithm 3.1] after obtaining a saddle-point problem [2, Example 5.6]
 
 ## TGV denoising (TGVdenoise.m)
 TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the denoised images shown below). 
@@ -42,11 +42,11 @@ The TGV method is only marginally higher in RSNR and SSIM but there is no obviou
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkyODkwMTg2LC0zMzcxMjAxNTEsLTYxMz
-Y2MDg4LC00MDMxMTUyOTcsLTIwNDc0OTQzOTEsNjA4NDM0OTEw
-LC0xODcxNDMxNTg0LC04MDk1MDAzNTAsLTE2MDg3Mjk2NjUsMj
-M0NDcyMTQ3LDIwNDkxOTU5MTIsMTUxMjg2MTY1NSwtMjE0NzM1
-NTgsLTE5MDg2MTQ3MTIsLTI2NjI3NDk5MSwxMzY5OTk4NTc1LC
-0xNzY5NjExMzc5LC0xNzU3ODU5MDkwLC0yNDY2MTc3ODJdfQ==
-
+eyJoaXN0b3J5IjpbMzQwNTM1ODI0LDI5Mjg5MDE4NiwtMzM3MT
+IwMTUxLC02MTM2NjA4OCwtNDAzMTE1Mjk3LC0yMDQ3NDk0Mzkx
+LDYwODQzNDkxMCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNj
+A4NzI5NjY1LDIzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2
+NTUsLTIxNDczNTU4LC0xOTA4NjE0NzEyLC0yNjYyNzQ5OTEsMT
+M2OTk5ODU3NSwtMTc2OTYxMTM3OSwtMTc1Nzg1OTA5MCwtMjQ2
+NjE3NzgyXX0=
 -->
