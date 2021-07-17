@@ -50,15 +50,17 @@ function main
 	y = x0+randn(size(x0))*0.1; % white Gaussian noise added to the image
 	figure(2);
 	imshow(y);
-    title(['noisy image with RSNR = ',num2str(calcRSNR(y,x0)),' dB']);
+    title('noisy image');
 	imwrite(y,'images\noisy_gray.png');
     
     xsol = TGVdenoising_TD(y,lambda0,lambda1,tau,Nbiter);
 	figure(3);
 	imshow(xsol);
-    title(['denoised image with RSNR = ',num2str(calcRSNR(xsol,x0)),' dB']);
+    title('TGV denoised image');
     imwrite(xsol,'images\TGVdenoised_gray.png');
     
+    fprintf('noisy image: RSNR = %.4f dB, SSIM = %.4f\n',calcRSNR(y,x0),ssim(y,x0));
+    fprintf('TGV denoised image: RSNR = %.4f dB, SSIM = %.4f\n',calcRSNR(xsol,x0),ssim(xsol,x0));
 end
 
 
