@@ -42,9 +42,10 @@ The TGV method is only marginally higher in RSNR and SSIM but there is no obviou
 - [1] L. I. Rudin, S. Osher, and E. Fatemi, “Nonlinear total variation based noise removal algorithms,” _Physica D_, vol. 60, no. 1–4, pp. 259–268, 1992.
 - [2] A. Chambolle and T. Pock, “An introduction to continuous optimization for imaging,” _Acta Numer._, vol. 25, pp. 161–319, 2016.
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
+- [4] K. Bredies, K. Kunisch, and T. Pock, “Total Generalized Variation,” _SIAM J. Imaging Sci._, vol. 3, no. 3, pp. 492–526, 2010.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTU4MTAzNjksMjkyODkwMTg2LC0zMz
+eyJoaXN0b3J5IjpbLTE1OTUyNTM5NDIsMjkyODkwMTg2LC0zMz
 cxMjAxNTEsLTYxMzY2MDg4LC00MDMxMTUyOTcsLTIwNDc0OTQz
 OTEsNjA4NDM0OTEwLC0xODcxNDMxNTg0LC04MDk1MDAzNTAsLT
 E2MDg3Mjk2NjUsMjM0NDcyMTQ3LDIwNDkxOTU5MTIsMTUxMjg2
