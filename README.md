@@ -11,13 +11,13 @@ TV denoising finds the unique solution <img src="https://latex.codecogs.com/svg.
 
 where
 
-<img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{y}&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{y} \in \mathbb{R}^{M \times N}" /> is the observed image, 
+<img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{y}&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{y} \in \mathbb{R}^{M \times N}" /> is the observed image, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\lambda" title="\large \lambda" /> is a regularisation parameter that balances the two terms, and 
 
 $$\frac{1}{2} \left\Vert \mathbf{x}-\mathbf{y} \right\Vert ^2 + \lambda \left\Vert \mathbf{x} \right\Vert_{\text{TV}}$$
 where
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI3MDgxMDM5LC0yNjYyNzQ5OTEsMTM2OT
-k5ODU3NSwtMTc2OTYxMTM3OSwtMTc1Nzg1OTA5MCwtMjQ2NjE3
-NzgyXX0=
+eyJoaXN0b3J5IjpbLTQzOTM5NzksLTI2NjI3NDk5MSwxMzY5OT
+k4NTc1LC0xNzY5NjExMzc5LC0xNzU3ODU5MDkwLC0yNDY2MTc3
+ODJdfQ==
 -->
