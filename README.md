@@ -9,7 +9,7 @@ Total Variation (TV) denoising (more specifically, we mean the ROF model [1]) fi
 
 <img src="https://latex.codecogs.com/svg.latex?\large&space;\frac{1}{2}&space;\left\Vert&space;\mathbf{x}-\mathbf{y}&space;\right\Vert&space;^2&space;&plus;&space;\lambda&space;\left\Vert&space;\mathbf{x}&space;\right\Vert_{\text{TV}}" title="\large \frac{1}{2} \left\Vert \mathbf{x}-\mathbf{y} \right\Vert ^2 + \lambda \left\Vert \mathbf{x} \right\Vert_{\text{TV}}" />
 
-where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{y}&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{y} \in \mathbb{R}^{M \times N}" /> is the observed image, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\lambda" title="\large \lambda" /> is a regularisation parameter that balances the two terms, and <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\left\Vert&space;\cdot&space;\right\Vert_{\text{TV}}" title="\large \left\Vert \cdot \right\Vert_{\text{TV}}" /> is the total variation which is defined by
+where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{y}&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{y} \in \mathbb{R}^{M \times N}" /> is the observed image, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\lambda" title="\large \lambda" /> is a regularisation parameter that balances the two terms, and <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\left\Vert&space;\cdot&space;\right\Vert_{\text{TV}}" title="\large \left\Vert \cdot \right\Vert_{\text{TV}}" /> is the total variation of an image which is defined by
 
 <img src="https://latex.codecogs.com/svg.latex?\large&space;\left\Vert&space;\mathbf{x}&space;\right\Vert_{\text{TV}}&space;=&space;\left\Vert&space;\mathrm{D}&space;\mathbf{x}&space;\right\Vert_{p,1}&space;=&space;\sum_{i=1,j=1}^{M,N}&space;\left|&space;\left(&space;\mathrm{D}&space;\mathbf{x}&space;\right)_{i,j}&space;\right|_p&space;=&space;\sum_{i=1,j=1}^{M,N}&space;\left(&space;\left(&space;\mathrm{D}&space;\mathbf{x}&space;\right)_{i,j,1}^p&space;&plus;&space;\left(&space;\mathrm{D}&space;\mathbf{x}&space;\right)_{i,j,2}^p&space;\right)^{1/p}" title="\large \left\Vert \mathbf{x} \right\Vert_{\text{TV}} = \left\Vert \mathrm{D} \mathbf{x} \right\Vert_{p,1} = \sum_{i=1,j=1}^{M,N} \left| \left( \mathrm{D} \mathbf{x} \right)_{i,j} \right|_p = \sum_{i=1,j=1}^{M,N} \left( \left( \mathrm{D} \mathbf{x} \right)_{i,j,1}^p + \left( \mathrm{D} \mathbf{x} \right)_{i,j,2}^p \right)^{1/p}" />
 
@@ -42,11 +42,11 @@ The TGV method is only marginally higher in RSNR and SSIM but there is no obviou
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0MjE3NjUzNywtMzM3MTIwMTUxLC02MT
-M2NjA4OCwtNDAzMTE1Mjk3LC0yMDQ3NDk0MzkxLDYwODQzNDkx
-MCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNjA4NzI5NjY1LD
-IzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2NTUsLTIxNDcz
-NTU4LC0xOTA4NjE0NzEyLC0yNjYyNzQ5OTEsMTM2OTk5ODU3NS
-wtMTc2OTYxMTM3OSwtMTc1Nzg1OTA5MCwtMjQ2NjE3NzgyXX0=
+eyJoaXN0b3J5IjpbMjkyODkwMTg2LC0zMzcxMjAxNTEsLTYxMz
+Y2MDg4LC00MDMxMTUyOTcsLTIwNDc0OTQzOTEsNjA4NDM0OTEw
+LC0xODcxNDMxNTg0LC04MDk1MDAzNTAsLTE2MDg3Mjk2NjUsMj
+M0NDcyMTQ3LDIwNDkxOTU5MTIsMTUxMjg2MTY1NSwtMjE0NzM1
+NTgsLTE5MDg2MTQ3MTIsLTI2NjI3NDk5MSwxMzY5OTk4NTc1LC
+0xNzY5NjExMzc5LC0xNzU3ODU5MDkwLC0yNDY2MTc3ODJdfQ==
 
 -->
