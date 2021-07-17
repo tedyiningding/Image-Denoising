@@ -18,7 +18,7 @@ where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;
 The code solves the problem using the over-relaxed Chambolle-Pock algorithm [3, Algorithm 3.1] after obtaining a saddle-point problem [2, Example 5.6]
 
 ## TGV denoising (TGVdenoise.m)
-TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the results shown below). 
+TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the denoised images shown below). 
 
 ## Results
 The clear image | The noisy image
@@ -42,11 +42,11 @@ The TGV method is only marginally higher in RSNR and SSIM but there is no obviou
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjQ4NzE4MzUsLTMzNzEyMDE1MSwtNj
-EzNjYwODgsLTQwMzExNTI5NywtMjA0NzQ5NDM5MSw2MDg0MzQ5
-MTAsLTE4NzE0MzE1ODQsLTgwOTUwMDM1MCwtMTYwODcyOTY2NS
-wyMzQ0NzIxNDcsMjA0OTE5NTkxMiwxNTEyODYxNjU1LC0yMTQ3
-MzU1OCwtMTkwODYxNDcxMiwtMjY2Mjc0OTkxLDEzNjk5OTg1Nz
-UsLTE3Njk2MTEzNzksLTE3NTc4NTkwOTAsLTI0NjYxNzc4Ml19
+eyJoaXN0b3J5IjpbLTM5NTA2NDY3NiwtMzM3MTIwMTUxLC02MT
+M2NjA4OCwtNDAzMTE1Mjk3LC0yMDQ3NDk0MzkxLDYwODQzNDkx
+MCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNjA4NzI5NjY1LD
+IzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2NTUsLTIxNDcz
+NTU4LC0xOTA4NjE0NzEyLC0yNjYyNzQ5OTEsMTM2OTk5ODU3NS
+wtMTc2OTYxMTM3OSwtMTc1Nzg1OTA5MCwtMjQ2NjE3NzgyXX0=
 
 -->
