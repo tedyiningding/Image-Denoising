@@ -22,7 +22,7 @@ TV regularisation only promotes piecewise constant structures therefore the resu
 
 <img src="https://latex.codecogs.com/svg.latex?\large&space;\frac{1}{2}&space;\left\Vert&space;\mathbf{u}&space;-&space;\mathbf{y}&space;\right\Vert^{2}&space;&plus;&space;\lambda_{0}&space;\left\Vert&space;\mathrm{J}\mathbf{v}&space;\right\Vert_{2,1}&space;&plus;&space;\lambda_{1}&space;\left\Vert&space;\mathrm{D}\mathbf{u}&space;-&space;\mathbf{v}&space;\right\Vert_{2,1}" title="\large \frac{1}{2} \left\Vert \mathbf{u} - \mathbf{y} \right\Vert^{2} + \lambda_{0} \left\Vert \mathrm{J}\mathbf{v} \right\Vert_{2,1} + \lambda_{1} \left\Vert \mathrm{D}\mathbf{u} - \mathbf{v} \right\Vert_{2,1}" />
 
-where the discrete gradient operator <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathrm{D}" title="\large \mathrm{D}" /> is the same as in the example above, 
+where the discrete gradient operator <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathrm{D}" title="\large \mathrm{D}" /> is the same as in the example above, operator 
 
 As can be seen from the equation above, TGV denoising seeks a
 
@@ -51,7 +51,7 @@ The TGV method is only marginally higher in RSNR and SSIM but there is no obviou
 - [4] K. Bredies, K. Kunisch, and T. Pock, “Total Generalized Variation,” _SIAM J. Imaging Sci._, vol. 3, no. 3, pp. 492–526, 2010.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTg1NTA0ODksLTE5NzczNzI5ODgsLT
+eyJoaXN0b3J5IjpbLTEwMTI4NDQyMTEsLTE5NzczNzI5ODgsLT
 MyNjc4MzQ2NSwtMTU5NTI1Mzk0MiwyOTI4OTAxODYsLTMzNzEy
 MDE1MSwtNjEzNjYwODgsLTQwMzExNTI5NywtMjA0NzQ5NDM5MS
 w2MDg0MzQ5MTAsLTE4NzE0MzE1ODQsLTgwOTUwMDM1MCwtMTYw
