@@ -16,11 +16,11 @@ where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;
 where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathrm{D}:&space;\mathbb{R}^{M&space;\times&space;N}&space;\rightarrow&space;\mathbb{R}^{M&space;\times&space;N&space;\times&space;2}" title="\large \mathrm{D}: \mathbb{R}^{M \times N} \rightarrow \mathbb{R}^{M \times N \times 2}" /> is the discrete gradient operator. That is, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\left\Vert&space;\cdot&space;\right\Vert_{\text{TV}}" title="\large \left\Vert \cdot \right\Vert_{\text{TV}}" /> is the <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\ell_1" title="\large \ell_1" />-norm  of the <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;p" title="\large p" />-norm of the pixelwise image gradients [1]. When 
 
 ## References
-- 
+- A. Chambolle and T. Pock, “An introduction to continuous optimization for imaging,” _Acta Numer._, vol. 25, pp. 161–319, 2016.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDg3Mjk2NjUsMjM0NDcyMTQ3LDIwND
-kxOTU5MTIsMTUxMjg2MTY1NSwtMjE0NzM1NTgsLTE5MDg2MTQ3
-MTIsLTI2NjI3NDk5MSwxMzY5OTk4NTc1LC0xNzY5NjExMzc5LC
-0xNzU3ODU5MDkwLC0yNDY2MTc3ODJdfQ==
+eyJoaXN0b3J5IjpbLTgwOTUwMDM1MCwtMTYwODcyOTY2NSwyMz
+Q0NzIxNDcsMjA0OTE5NTkxMiwxNTEyODYxNjU1LC0yMTQ3MzU1
+OCwtMTkwODYxNDcxMiwtMjY2Mjc0OTkxLDEzNjk5OTg1NzUsLT
+E3Njk2MTEzNzksLTE3NTc4NTkwOTAsLTI0NjYxNzc4Ml19
 -->
