@@ -41,7 +41,7 @@ function main
 	lambda1 = 1/9;	% regularization parameter
 	tau = 0.01;		% proximal parameter > 0; influences the convergence speed (i.e. primal step size)
     
-    x0 = double(imread('images\parrotgray.png'))/255;   % Initial image
+    x0 = double(imread('images\gray.png'))/255;   % Initial image
 	figure(1);
 	imshow(x0);
     title('clean image')
@@ -50,14 +50,14 @@ function main
 	y = x0+randn(size(x0))*0.1; % white Gaussian noise added to the image
 	figure(2);
 	imshow(y);
-    title(['noisy image with RSNR = ',num2str(calcRSNR(y,x0))]);
-	imwrite(y,'images\noisy.png');
+    title(['noisy image with RSNR = ',num2str(calcRSNR(y,x0)),' dB']);
+	imwrite(y,'images\noisy_gray.png');
     
     xsol = TGVdenoising_TD(y,lambda0,lambda1,tau,Nbiter);
 	figure(3);
 	imshow(xsol);
-    title(['denoised image with RSNR = ',num2str(calcRSNR(xsol,x0))]);
-    imwrite(xsol,'images\TGVdenoised.png');
+    title(['denoised image with RSNR = ',num2str(calcRSNR(xsol,x0)),' dB']);
+    imwrite(xsol,'images\TGVdenoised_gray.png');
     
 end
 
