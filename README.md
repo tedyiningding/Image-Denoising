@@ -30,6 +30,11 @@ TV denoised image | TGV denoised image
 The table below shows some quantitative results.
 |  Images | RSNR (dB) |
 | - | - |
+| Noisy        | 14.1727|
+| TV denoised  | 25.3879|
+| TGV denoised | 25.3985|
+
+
 
 ## References
 - [1] L. I. Rudin, S. Osher, and E. Fatemi, “Nonlinear total variation based noise removal algorithms,” _Physica D_, vol. 60, no. 1–4, pp. 259–268, 1992.
@@ -37,7 +42,7 @@ The table below shows some quantitative results.
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MzkyMzQ5MiwtNDAzMTE1Mjk3LC0yMD
+eyJoaXN0b3J5IjpbMTk3MjEyNDI3MywtNDAzMTE1Mjk3LC0yMD
 Q3NDk0MzkxLDYwODQzNDkxMCwtMTg3MTQzMTU4NCwtODA5NTAw
 MzUwLC0xNjA4NzI5NjY1LDIzNDQ3MjE0NywyMDQ5MTk1OTEyLD
 E1MTI4NjE2NTUsLTIxNDczNTU4LC0xOTA4NjE0NzEyLC0yNjYy
