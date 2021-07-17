@@ -13,13 +13,14 @@ where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;
 
 <img src="https://latex.codecogs.com/svg.latex?\large&space;\left\Vert&space;\mathbf{x}&space;\right\Vert_{\text{TV}}&space;=&space;\left\Vert&space;\mathrm{D}&space;\mathbf{x}&space;\right\Vert_{p,1}&space;=&space;\sum_{i=1,j=1}^{M,N}&space;\left|&space;\left(&space;\mathrm{D}&space;\mathbf{x}&space;\right)_{i,j}&space;\right|_p&space;=&space;\sum_{i=1,j=1}^{M,N}&space;\left(&space;\left(&space;\mathrm{D}&space;\mathbf{x}&space;\right)_{i,j,1}^p&space;&plus;&space;\left(&space;\mathrm{D}&space;\mathbf{x}&space;\right)_{i,j,2}^p&space;\right)^{1/p}" title="\large \left\Vert \mathbf{x} \right\Vert_{\text{TV}} = \left\Vert \mathrm{D} \mathbf{x} \right\Vert_{p,1} = \sum_{i=1,j=1}^{M,N} \left| \left( \mathrm{D} \mathbf{x} \right)_{i,j} \right|_p = \sum_{i=1,j=1}^{M,N} \left( \left( \mathrm{D} \mathbf{x} \right)_{i,j,1}^p + \left( \mathrm{D} \mathbf{x} \right)_{i,j,2}^p \right)^{1/p}" />
 
-where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathrm{D}:&space;\mathbb{R}^{M&space;\times&space;N}&space;\rightarrow&space;\mathbb{R}^{M&space;\times&space;N&space;\times&space;2}" title="\large \mathrm{D}: \mathbb{R}^{M \times N} \rightarrow \mathbb{R}^{M \times N \times 2}" /> is the discrete gradient operator. That is, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\left\Vert&space;\cdot&space;\right\Vert_{\text{TV}}" title="\large \left\Vert \cdot \right\Vert_{\text{TV}}" /> is the <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\ell_1" title="\large \ell_1" />-norm  of the <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;p" title="\large p" />-norm of the pixelwise image gradients [^ref1]. When 
+where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathrm{D}:&space;\mathbb{R}^{M&space;\times&space;N}&space;\rightarrow&space;\mathbb{R}^{M&space;\times&space;N&space;\times&space;2}" title="\large \mathrm{D}: \mathbb{R}^{M \times N} \rightarrow \mathbb{R}^{M \times N \times 2}" /> is the discrete gradient operator. That is, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\left\Vert&space;\cdot&space;\right\Vert_{\text{TV}}" title="\large \left\Vert \cdot \right\Vert_{\text{TV}}" /> is the <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\ell_1" title="\large \ell_1" />-norm  of the <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;p" title="\large p" />-norm of the pixelwise image gradients [1]. When 
 
-[^ref1]: [An introduction to continuous optimization for imaging](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/1115AA7E36FC201E811040D11118F67F/S096249291600009Xa.pdf/an_introduction_to_continuous_optimization_for_imaging.pdf?casa_token=BQQ0J6l4nZkAAAAA:vZf8R2M3tm2tv--WwGdUmnuec95F12Sw6Vhu_3gqRZbnifR54hv4iGLL1709qG7iGcYQzQ)
+## References
+- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNDE3NjQyNSwyMzQ0NzIxNDcsMjA0OT
-E5NTkxMiwxNTEyODYxNjU1LC0yMTQ3MzU1OCwtMTkwODYxNDcx
-MiwtMjY2Mjc0OTkxLDEzNjk5OTg1NzUsLTE3Njk2MTEzNzksLT
-E3NTc4NTkwOTAsLTI0NjYxNzc4Ml19
+eyJoaXN0b3J5IjpbLTE2MDg3Mjk2NjUsMjM0NDcyMTQ3LDIwND
+kxOTU5MTIsMTUxMjg2MTY1NSwtMjE0NzM1NTgsLTE5MDg2MTQ3
+MTIsLTI2NjI3NDk5MSwxMzY5OTk4NTc1LC0xNzY5NjExMzc5LC
+0xNzU3ODU5MDkwLC0yNDY2MTc3ODJdfQ==
 -->
