@@ -5,7 +5,7 @@ A collection of MATLAB scripts and functions which achieves image denoising base
 Some codes are adapted from [Laurent Condat's work](https://lcondat.github.io/software.html).
 
 ## TV Denoising (TVdenoise.m)
-TV denoising (more specifically, the ROF model [1]) finds the unique solution <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{x}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{x}^\star \in \mathbb{R}^{M \times N}" /> which minimises
+Total Variation (TV) denoising (more specifically, we mean the ROF model [1]) finds the unique solution <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{x}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{x}^\star \in \mathbb{R}^{M \times N}" /> which minimises
 
 <img src="https://latex.codecogs.com/svg.latex?\large&space;\frac{1}{2}&space;\left\Vert&space;\mathbf{x}-\mathbf{y}&space;\right\Vert&space;^2&space;&plus;&space;\lambda&space;\left\Vert&space;\mathbf{x}&space;\right\Vert_{\text{TV}}" title="\large \frac{1}{2} \left\Vert \mathbf{x}-\mathbf{y} \right\Vert ^2 + \lambda \left\Vert \mathbf{x} \right\Vert_{\text{TV}}" />
 
@@ -42,7 +42,7 @@ The TGV method is only marginally higher in RSNR and SSIM but there is no obviou
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NTA2NDY3NiwtMzM3MTIwMTUxLC02MT
+eyJoaXN0b3J5IjpbMTY0MjE3NjUzNywtMzM3MTIwMTUxLC02MT
 M2NjA4OCwtNDAzMTE1Mjk3LC0yMDQ3NDk0MzkxLDYwODQzNDkx
 MCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNjA4NzI5NjY1LD
 IzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2NTUsLTIxNDcz
