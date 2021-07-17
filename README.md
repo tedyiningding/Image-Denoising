@@ -20,7 +20,11 @@ The [code](https://github.com/tedyiningding/Image-Denoising/blob/main/TVdenoise.
 ## TGV denoising
 TV regularisation only promotes piecewise constant structures therefore the result could suffer from staircasing artefacts (as will be seen from the denoised images shown below). To combat this, Total Generalised Variation (TGV) was proposed in [4]. The second order TGV not only promotes piecewise constant structures, but also piecewise affine structures. It finds the unique solution <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{u}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{u}^\star \in \mathbb{R}^{M \times N}" /> (and the optimiser of an auxiliary variable <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{v}^\star&space;=&space;\left(&space;\mathbf{v}_{1}^\star,&space;\mathbf{v}_{2}^\star&space;\right)&space;\in&space;\mathbb{R}^{M&space;\times&space;N&space;\times&space;2}" title="\large \mathbf{v}^\star = \left( \mathbf{v}_{1}^\star, \mathbf{v}_{2}^\star \right) \in \mathbb{R}^{M \times N \times 2}" />) which minimises
 
+<img src="https://latex.codecogs.com/svg.latex?\large&space;\frac{1}{2}&space;\left\Vert&space;\mathbf{u}&space;-&space;\mathbf{y}&space;\right\Vert^{2}&space;&plus;&space;\lambda_{0}&space;\left\Vert&space;\mathrm{J}\mathbf{v}&space;\right\Vert_{2,1}&space;&plus;&space;\lambda_{1}&space;\left\Vert&space;\mathrm{D}\mathbf{u}&space;-&space;\mathbf{v}&space;\right\Vert_{2,1}" title="\large \frac{1}{2} \left\Vert \mathbf{u} - \mathbf{y} \right\Vert^{2} + \lambda_{0} \left\Vert \mathrm{J}\mathbf{v} \right\Vert_{2,1} + \lambda_{1} \left\Vert \mathrm{D}\mathbf{u} - \mathbf{v} \right\Vert_{2,1}" />
 
+where 
+
+As can be seen from the equation above, TGV denoising seeks a
 
 Similar to the example above, the [code](https://github.com/tedyiningding/Image-Denoising/blob/main/TGVdenoise.m) solves the problem using the over-relaxed Chambolle-Pock algorithm [3, Algorithm 3.1] after obtaining a saddle-point problem [2, Sec. 7.2.].
 
@@ -47,11 +51,11 @@ The TGV method is only marginally higher in RSNR and SSIM but there is no obviou
 - [4] K. Bredies, K. Kunisch, and T. Pock, “Total Generalized Variation,” _SIAM J. Imaging Sci._, vol. 3, no. 3, pp. 492–526, 2010.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzczNzI5ODgsLTMyNjc4MzQ2NSwtMT
-U5NTI1Mzk0MiwyOTI4OTAxODYsLTMzNzEyMDE1MSwtNjEzNjYw
-ODgsLTQwMzExNTI5NywtMjA0NzQ5NDM5MSw2MDg0MzQ5MTAsLT
-E4NzE0MzE1ODQsLTgwOTUwMDM1MCwtMTYwODcyOTY2NSwyMzQ0
-NzIxNDcsMjA0OTE5NTkxMiwxNTEyODYxNjU1LC0yMTQ3MzU1OC
-wtMTkwODYxNDcxMiwtMjY2Mjc0OTkxLDEzNjk5OTg1NzUsLTE3
-Njk2MTEzNzldfQ==
+eyJoaXN0b3J5IjpbNjg1MTkwODY5LC0xOTc3MzcyOTg4LC0zMj
+Y3ODM0NjUsLTE1OTUyNTM5NDIsMjkyODkwMTg2LC0zMzcxMjAx
+NTEsLTYxMzY2MDg4LC00MDMxMTUyOTcsLTIwNDc0OTQzOTEsNj
+A4NDM0OTEwLC0xODcxNDMxNTg0LC04MDk1MDAzNTAsLTE2MDg3
+Mjk2NjUsMjM0NDcyMTQ3LDIwNDkxOTU5MTIsMTUxMjg2MTY1NS
+wtMjE0NzM1NTgsLTE5MDg2MTQ3MTIsLTI2NjI3NDk5MSwxMzY5
+OTk4NTc1XX0=
 -->
