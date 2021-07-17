@@ -18,7 +18,7 @@ where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;
 The [code](https://github.com/tedyiningding/Image-Denoising/blob/main/TVdenoise.m) solves the problem using the over-relaxed Chambolle-Pock algorithm [3, Algorithm 3.1] after obtaining a saddle-point problem [2, Example 5.6]
 
 ## TGV denoising (TGVdenoise.m)
-TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the denoised images shown below). To combat this, Total Generalised Variation (TGV) was proposed in [4]. The second order TGV not only promotes piecewise constant, but also piecewise affine. It finds the unique solution <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{u}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{u}^\star \in \mathbb{R}^{M \times N}" /> (and an auxiliary vectorial image ) which minimises
+TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the denoised images shown below). To combat this, Total Generalised Variation (TGV) was proposed in [4]. The second order TGV not only promotes piecewise constant, but also piecewise affine. It finds the unique solution <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{u}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{u}^\star \in \mathbb{R}^{M \times N}" /> (and an auxiliary variable <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{v}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{v}^\star \in \mathbb{R}^{M \times N \times 2}" /> ) which minimises
 
 ## Results
 The clear image | The noisy image
@@ -42,11 +42,11 @@ The TGV method is only marginally higher in RSNR and SSIM but there is no obviou
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE0MzU2NjYsMjkyODkwMTg2LC0zMzcxMj
-AxNTEsLTYxMzY2MDg4LC00MDMxMTUyOTcsLTIwNDc0OTQzOTEs
-NjA4NDM0OTEwLC0xODcxNDMxNTg0LC04MDk1MDAzNTAsLTE2MD
-g3Mjk2NjUsMjM0NDcyMTQ3LDIwNDkxOTU5MTIsMTUxMjg2MTY1
-NSwtMjE0NzM1NTgsLTE5MDg2MTQ3MTIsLTI2NjI3NDk5MSwxMz
-Y5OTk4NTc1LC0xNzY5NjExMzc5LC0xNzU3ODU5MDkwLC0yNDY2
-MTc3ODJdfQ==
+eyJoaXN0b3J5IjpbNjgwOTQ0MTMyLDI5Mjg5MDE4NiwtMzM3MT
+IwMTUxLC02MTM2NjA4OCwtNDAzMTE1Mjk3LC0yMDQ3NDk0Mzkx
+LDYwODQzNDkxMCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNj
+A4NzI5NjY1LDIzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2
+NTUsLTIxNDczNTU4LC0xOTA4NjE0NzEyLC0yNjYyNzQ5OTEsMT
+M2OTk5ODU3NSwtMTc2OTYxMTM3OSwtMTc1Nzg1OTA5MCwtMjQ2
+NjE3NzgyXX0=
 -->
