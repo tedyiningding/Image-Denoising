@@ -21,9 +21,8 @@ The code solves the problem using the over-relaxed Chambolle-Pock algorithm [3, 
 TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the results shown below). 
 
 ## Results
-The clear image | The noisy image
+The clear image 		   |The noisy image
 :-------------------------:|:-------------------------:
-
 ![clear](https://github.com/tedyiningding/Image-Denoising/blob/main/images/gray.png?raw=true) | ![noisy](https://github.com/tedyiningding/Image-Denoising/blob/main/images/noisy_gray.png?raw=true)
 
 
@@ -34,10 +33,10 @@ The clear image | The noisy image
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY0NzAwNTM4LC0yMDQ3NDk0MzkxLDYwOD
-QzNDkxMCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNjA4NzI5
-NjY1LDIzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2NTUsLT
-IxNDczNTU4LC0xOTA4NjE0NzEyLC0yNjYyNzQ5OTEsMTM2OTk5
-ODU3NSwtMTc2OTYxMTM3OSwtMTc1Nzg1OTA5MCwtMjQ2NjE3Nz
-gyXX0=
+eyJoaXN0b3J5IjpbMTk0MzczNzA0MCwtMjA0NzQ5NDM5MSw2MD
+g0MzQ5MTAsLTE4NzE0MzE1ODQsLTgwOTUwMDM1MCwtMTYwODcy
+OTY2NSwyMzQ0NzIxNDcsMjA0OTE5NTkxMiwxNTEyODYxNjU1LC
+0yMTQ3MzU1OCwtMTkwODYxNDcxMiwtMjY2Mjc0OTkxLDEzNjk5
+OTg1NzUsLTE3Njk2MTEzNzksLTE3NTc4NTkwOTAsLTI0NjYxNz
+c4Ml19
 -->
