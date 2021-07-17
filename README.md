@@ -2,7 +2,7 @@
 # Image-Denoising
 A collection of MATLAB scripts and functions which achieves image denoising based on variational methods
 
-Some codes are adapted from [Laurent Condat's work](https://lcondat.github.io/software.html).
+Codes are adapted from [Laurent Condat's work](https://lcondat.github.io/software.html).
 
 ## TV Denoising
 Total Variation (TV) denoising (more specifically, we mean the ROF model [1]) finds the unique solution <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{x}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{x}^\star \in \mathbb{R}^{M \times N}" /> which minimises
@@ -18,7 +18,7 @@ where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;
 The [code](https://github.com/tedyiningding/Image-Denoising/blob/main/TVdenoise.m) solves the problem using the over-relaxed Chambolle-Pock algorithm [3, Algorithm 3.1] after obtaining a saddle-point problem [2, Example 5.6]
 
 ## TGV denoising
-TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the denoised images shown below). To combat this, Total Generalised Variation (TGV) was proposed in [4]. The second order TGV not only promotes piecewise constant, but also piecewise affine. It finds the unique solution <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{u}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{u}^\star \in \mathbb{R}^{M \times N}" /> (and the optimiser of an auxiliary variable <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{v}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N&space;\times&space;2}" title="\large \mathbf{v}^\star \in \mathbb{R}^{M \times N \times 2}" />) which minimises
+TV regularisation only promotes piecewise constant structures therefore the result could suffer from staircasing artefacts (as will be seen from the denoised images shown below). To combat this, Total Generalised Variation (TGV) was proposed in [4]. The second order TGV not only promotes piecewise constant structures, but also piecewise affine structures. It finds the unique solution <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{u}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{u}^\star \in \mathbb{R}^{M \times N}" /> (and the optimiser of an auxiliary variable <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{v}^\star&space;\in&space;\mathbb{R}^{M&space;\times&space;N&space;\times&space;2}" title="\large \mathbf{v}^\star \in \mathbb{R}^{M \times N \times 2}" />) which minimises
 
 
 
@@ -45,11 +45,11 @@ The TGV method is only marginally higher in RSNR and SSIM but there is no obviou
 - [4] K. Bredies, K. Kunisch, and T. Pock, “Total Generalized Variation,” _SIAM J. Imaging Sci._, vol. 3, no. 3, pp. 492–526, 2010.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3ODg0NjYwNCwtMTU5NTI1Mzk0MiwyOT
-I4OTAxODYsLTMzNzEyMDE1MSwtNjEzNjYwODgsLTQwMzExNTI5
-NywtMjA0NzQ5NDM5MSw2MDg0MzQ5MTAsLTE4NzE0MzE1ODQsLT
-gwOTUwMDM1MCwtMTYwODcyOTY2NSwyMzQ0NzIxNDcsMjA0OTE5
-NTkxMiwxNTEyODYxNjU1LC0yMTQ3MzU1OCwtMTkwODYxNDcxMi
-wtMjY2Mjc0OTkxLDEzNjk5OTg1NzUsLTE3Njk2MTEzNzksLTE3
-NTc4NTkwOTBdfQ==
+eyJoaXN0b3J5IjpbNDU3MzQ0NzI2LC0xNTk1MjUzOTQyLDI5Mj
+g5MDE4NiwtMzM3MTIwMTUxLC02MTM2NjA4OCwtNDAzMTE1Mjk3
+LC0yMDQ3NDk0MzkxLDYwODQzNDkxMCwtMTg3MTQzMTU4NCwtOD
+A5NTAwMzUwLC0xNjA4NzI5NjY1LDIzNDQ3MjE0NywyMDQ5MTk1
+OTEyLDE1MTI4NjE2NTUsLTIxNDczNTU4LC0xOTA4NjE0NzEyLC
+0yNjYyNzQ5OTEsMTM2OTk5ODU3NSwtMTc2OTYxMTM3OSwtMTc1
+Nzg1OTA5MF19
 -->
