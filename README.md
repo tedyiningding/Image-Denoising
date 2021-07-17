@@ -15,15 +15,16 @@ where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;
 
 where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathrm{D}:&space;\mathbb{R}^{M&space;\times&space;N}&space;\rightarrow&space;\mathbb{R}^{M&space;\times&space;N&space;\times&space;2}" title="\large \mathrm{D}: \mathbb{R}^{M \times N} \rightarrow \mathbb{R}^{M \times N \times 2}" /> is the discrete gradient operator. That is, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\left\Vert&space;\cdot&space;\right\Vert_{\text{TV}}" title="\large \left\Vert \cdot \right\Vert_{\text{TV}}" /> is the <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\ell_1" title="\large \ell_1" />-norm  of the <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;p" title="\large p" />-norm of the pixelwise image gradients [1, pp. 168]. When <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;p=1" title="\large p=1" /> it is called the anisotropic TV, whereas when <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;p=2" title="\large p=2" /> it is called the isotropic TV, which is used here.
 
-The code solves the problem using the over-relaxed Chambolle-Pock algorithm [2, Algorithm 3.1]
+The code solves the problem using the over-relaxed Chambolle-Pock algorithm [2, Algorithm 3.1] after obtaining 
 
 ## References
-- A. Chambolle and T. Pock, “An introduction to continuous optimization for imaging,” _Acta Numer._, vol. 25, pp. 161–319, 2016.
+- [1] A. Chambolle and T. Pock, “An introduction to continuous optimization for imaging,” _Acta Numer._, vol. 25, pp. 161–319, 2016.
+- [2] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MjYwODAxMywtMTg3MTQzMTU4NCwtOD
-A5NTAwMzUwLC0xNjA4NzI5NjY1LDIzNDQ3MjE0NywyMDQ5MTk1
-OTEyLDE1MTI4NjE2NTUsLTIxNDczNTU4LC0xOTA4NjE0NzEyLC
-0yNjYyNzQ5OTEsMTM2OTk5ODU3NSwtMTc2OTYxMTM3OSwtMTc1
-Nzg1OTA5MCwtMjQ2NjE3NzgyXX0=
+eyJoaXN0b3J5IjpbMTc0NjY4MDk0LC0xODcxNDMxNTg0LC04MD
+k1MDAzNTAsLTE2MDg3Mjk2NjUsMjM0NDcyMTQ3LDIwNDkxOTU5
+MTIsMTUxMjg2MTY1NSwtMjE0NzM1NTgsLTE5MDg2MTQ3MTIsLT
+I2NjI3NDk5MSwxMzY5OTk4NTc1LC0xNzY5NjExMzc5LC0xNzU3
+ODU5MDkwLC0yNDY2MTc3ODJdfQ==
 -->
