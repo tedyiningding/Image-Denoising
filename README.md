@@ -2,7 +2,7 @@
 A collection of MATLAB scripts and functions which achieves image denoising based on variational methods
 
 ## TV Denoising
-S
+TV denoising finds the unique solution $\mathbf{x}$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NjU5ODA2NSwtMjQ2NjE3NzgyXX0=
+eyJoaXN0b3J5IjpbLTE0MTk5NjYyNTMsLTI0NjYxNzc4Ml19
 -->
