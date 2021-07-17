@@ -27,7 +27,7 @@ The clear image | The noisy image
 TV denoised image | TGV denoised image
 ![clear](https://github.com/tedyiningding/Image-Denoising/blob/main/images/TVdenoised_gray.png?raw=true) | ![noisy](https://github.com/tedyiningding/Image-Denoising/blob/main/images/TGVdenoised_gray.png?raw=true)
 
-The reconstructed signal
+The table below shows some quantitative results.
 |  Images | RSNR (dB) |
 | - | - |
 
@@ -37,10 +37,10 @@ The reconstructed signal
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMzExNTI5NywtMjA0NzQ5NDM5MSw2MD
-g0MzQ5MTAsLTE4NzE0MzE1ODQsLTgwOTUwMDM1MCwtMTYwODcy
-OTY2NSwyMzQ0NzIxNDcsMjA0OTE5NTkxMiwxNTEyODYxNjU1LC
-0yMTQ3MzU1OCwtMTkwODYxNDcxMiwtMjY2Mjc0OTkxLDEzNjk5
-OTg1NzUsLTE3Njk2MTEzNzksLTE3NTc4NTkwOTAsLTI0NjYxNz
-c4Ml19
+eyJoaXN0b3J5IjpbMTU1MzkyMzQ5MiwtNDAzMTE1Mjk3LC0yMD
+Q3NDk0MzkxLDYwODQzNDkxMCwtMTg3MTQzMTU4NCwtODA5NTAw
+MzUwLC0xNjA4NzI5NjY1LDIzNDQ3MjE0NywyMDQ5MTk1OTEyLD
+E1MTI4NjE2NTUsLTIxNDczNTU4LC0xOTA4NjE0NzEyLC0yNjYy
+NzQ5OTEsMTM2OTk5ODU3NSwtMTc2OTYxMTM3OSwtMTc1Nzg1OT
+A5MCwtMjQ2NjE3NzgyXX0=
 -->
