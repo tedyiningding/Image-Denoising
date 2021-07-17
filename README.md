@@ -22,7 +22,8 @@ TV regularisation only promotes piecewise constant therefore the result could su
 
 ## Results
 The clear image
-![s](https://github.com/tedyiningding/Image-Denoising/main/images/gray.png)
+![alt text](https://github.com/tedyiningding/Image-Denoising/blob/main/images/gray.png?raw=true)
+
 
 
 ## References
@@ -31,7 +32,7 @@ The clear image
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNDYwNjQzLC0yMDQ3NDk0MzkxLDYwOD
+eyJoaXN0b3J5IjpbMjA3NDkzMzgwLC0yMDQ3NDk0MzkxLDYwOD
 QzNDkxMCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNjA4NzI5
 NjY1LDIzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2NTUsLT
 IxNDczNTU4LC0xOTA4NjE0NzEyLC0yNjYyNzQ5OTEsMTM2OTk5
