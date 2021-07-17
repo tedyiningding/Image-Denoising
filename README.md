@@ -34,7 +34,7 @@ The table below shows some quantitative results.
 | TV denoised  | 25.3879|
 | TGV denoised | 25.3985|
 
-
+The TGV method is only marginally higher in the RSNR but there is no obvious staircasing artefacts (see the backgrou)
 
 ## References
 - [1] L. I. Rudin, S. Osher, and E. Fatemi, “Nonlinear total variation based noise removal algorithms,” _Physica D_, vol. 60, no. 1–4, pp. 259–268, 1992.
@@ -42,7 +42,7 @@ The table below shows some quantitative results.
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MjEyNDI3MywtNDAzMTE1Mjk3LC0yMD
+eyJoaXN0b3J5IjpbMTU2OTE3MTk4OSwtNDAzMTE1Mjk3LC0yMD
 Q3NDk0MzkxLDYwODQzNDkxMCwtMTg3MTQzMTU4NCwtODA5NTAw
 MzUwLC0xNjA4NzI5NjY1LDIzNDQ3MjE0NywyMDQ5MTk1OTEyLD
 E1MTI4NjE2NTUsLTIxNDczNTU4LC0xOTA4NjE0NzEyLC0yNjYy
