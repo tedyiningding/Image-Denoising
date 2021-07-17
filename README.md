@@ -22,7 +22,8 @@ TV regularisation only promotes piecewise constant therefore the result could su
 
 ## Results
 The clear image
-![sss]()
+![s](https://github.com/tedyiningding/Image-Denoising/main/images/gray.png)
+
 
 ## References
 - [1] L. I. Rudin, S. Osher, and E. Fatemi, “Nonlinear total variation based noise removal algorithms,” _Physica D_, vol. 60, no. 1–4, pp. 259–268, 1992.
@@ -30,10 +31,10 @@ The clear image
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODY0NTEzMSwtMjA0NzQ5NDM5MSw2MD
-g0MzQ5MTAsLTE4NzE0MzE1ODQsLTgwOTUwMDM1MCwtMTYwODcy
-OTY2NSwyMzQ0NzIxNDcsMjA0OTE5NTkxMiwxNTEyODYxNjU1LC
-0yMTQ3MzU1OCwtMTkwODYxNDcxMiwtMjY2Mjc0OTkxLDEzNjk5
-OTg1NzUsLTE3Njk2MTEzNzksLTE3NTc4NTkwOTAsLTI0NjYxNz
-c4Ml19
+eyJoaXN0b3J5IjpbMjAzNDYwNjQzLC0yMDQ3NDk0MzkxLDYwOD
+QzNDkxMCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNjA4NzI5
+NjY1LDIzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2NTUsLT
+IxNDczNTU4LC0xOTA4NjE0NzEyLC0yNjYyNzQ5OTEsMTM2OTk5
+ODU3NSwtMTc2OTYxMTM3OSwtMTc1Nzg1OTA5MCwtMjQ2NjE3Nz
+gyXX0=
 -->
