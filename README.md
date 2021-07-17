@@ -24,7 +24,7 @@ TV regularisation only promotes piecewise constant structures therefore the resu
 
 where the discrete gradient operator <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathrm{D}" title="\large \mathrm{D}" /> is the same as in the example above, the operator <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathrm{J}:&space;\mathbb{R}^{M&space;\times&space;N&space;\times&space;2}&space;\rightarrow&space;\mathbb{R}^{M&space;\times&space;N&space;\times&space;4}" title="\large \mathrm{J}: \mathbb{R}^{M \times N \times 2} \rightarrow \mathbb{R}^{M \times N \times 4}" /> can be decomposed into <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathrm{J}\mathbf{v}&space;=&space;\left(&space;\mathrm{D}\mathbf{v_1},&space;\mathrm{D}\mathbf{v_2}&space;\right)" title="\large \mathrm{J}\mathbf{v} = \left( \mathrm{D}\mathbf{v_1}, \mathrm{D}\mathbf{v_2} \right)" /> [2, Sec. 7.2.].
 
-As can be seen from the equation above, affine parts will lead to small values to the last two terms. Therefore, the second order TGV model promotes affine 
+As can be seen from the equation above, affine parts will lead to small values to the last two terms. Therefore, the second order TGV model promotes affine
 
 Similar to the example above, the [code](https://github.com/tedyiningding/Image-Denoising/blob/main/TGVdenoise.m) solves the problem using the over-relaxed Chambolle-Pock algorithm [3, Algorithm 3.1] after obtaining a saddle-point problem [2, Sec. 7.2.].
 
@@ -51,11 +51,11 @@ The TGV method is only marginally higher in RSNR and SSIM but there is no obviou
 - [4] K. Bredies, K. Kunisch, and T. Pock, “Total Generalized Variation,” _SIAM J. Imaging Sci._, vol. 3, no. 3, pp. 492–526, 2010.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNjE3MzU2NCwtMTk3NzM3Mjk4OCwtMz
-I2NzgzNDY1LC0xNTk1MjUzOTQyLDI5Mjg5MDE4NiwtMzM3MTIw
-MTUxLC02MTM2NjA4OCwtNDAzMTE1Mjk3LC0yMDQ3NDk0MzkxLD
-YwODQzNDkxMCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNjA4
-NzI5NjY1LDIzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2NT
-UsLTIxNDczNTU4LC0xOTA4NjE0NzEyLC0yNjYyNzQ5OTEsMTM2
-OTk5ODU3NV19
+eyJoaXN0b3J5IjpbLTIwOTE4MTgxNDIsLTE5NzczNzI5ODgsLT
+MyNjc4MzQ2NSwtMTU5NTI1Mzk0MiwyOTI4OTAxODYsLTMzNzEy
+MDE1MSwtNjEzNjYwODgsLTQwMzExNTI5NywtMjA0NzQ5NDM5MS
+w2MDg0MzQ5MTAsLTE4NzE0MzE1ODQsLTgwOTUwMDM1MCwtMTYw
+ODcyOTY2NSwyMzQ0NzIxNDcsMjA0OTE5NTkxMiwxNTEyODYxNj
+U1LC0yMTQ3MzU1OCwtMTkwODYxNDcxMiwtMjY2Mjc0OTkxLDEz
+Njk5OTg1NzVdfQ==
 -->
