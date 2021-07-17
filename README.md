@@ -21,7 +21,8 @@ The code solves the problem using the over-relaxed Chambolle-Pock algorithm [3, 
 TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the results shown below). 
 
 ## Results
-
+The clear image
+![s](https://github.com/tedyiningding/Image-Denoising/blob/main/images/gray.png)
 
 ## References
 - [1] L. I. Rudin, S. Osher, and E. Fatemi, “Nonlinear total variation based noise removal algorithms,” _Physica D_, vol. 60, no. 1–4, pp. 259–268, 1992.
@@ -29,9 +30,10 @@ TV regularisation only promotes piecewise constant therefore the result could su
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDc0OTQzOTEsNjA4NDM0OTEwLC0xOD
-cxNDMxNTg0LC04MDk1MDAzNTAsLTE2MDg3Mjk2NjUsMjM0NDcy
-MTQ3LDIwNDkxOTU5MTIsMTUxMjg2MTY1NSwtMjE0NzM1NTgsLT
-E5MDg2MTQ3MTIsLTI2NjI3NDk5MSwxMzY5OTk4NTc1LC0xNzY5
-NjExMzc5LC0xNzU3ODU5MDkwLC0yNDY2MTc3ODJdfQ==
+eyJoaXN0b3J5IjpbLTkyMjczMjg3MywtMjA0NzQ5NDM5MSw2MD
+g0MzQ5MTAsLTE4NzE0MzE1ODQsLTgwOTUwMDM1MCwtMTYwODcy
+OTY2NSwyMzQ0NzIxNDcsMjA0OTE5NTkxMiwxNTEyODYxNjU1LC
+0yMTQ3MzU1OCwtMTkwODYxNDcxMiwtMjY2Mjc0OTkxLDEzNjk5
+OTg1NzUsLTE3Njk2MTEzNzksLTE3NTc4NTkwOTAsLTI0NjYxNz
+c4Ml19
 -->
