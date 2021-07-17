@@ -18,7 +18,7 @@ where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;
 The [code](https://github.com/tedyiningding/Image-Denoising/blob/main/TVdenoise.m) solves the problem using the over-relaxed Chambolle-Pock algorithm [3, Algorithm 3.1] after obtaining a saddle-point problem [2, Example 5.6]
 
 ## TGV denoising (TGVdenoise.m)
-TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the denoised images shown below). To combat this, 
+TV regularisation only promotes piecewise constant therefore the result could suffer from staircasing artefacts (as will be seen from the denoised images shown below). To combat this, Total Generalised Variation (TGV) was proposed in [4]. The second order TGV not only promotes piecewise constant, but also piecewise linear
 
 ## Results
 The clear image | The noisy image
@@ -42,7 +42,7 @@ The TGV method is only marginally higher in RSNR and SSIM but there is no obviou
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjA2ODU3LDI5Mjg5MDE4NiwtMzM3MT
+eyJoaXN0b3J5IjpbNDY5NDQyNTEwLDI5Mjg5MDE4NiwtMzM3MT
 IwMTUxLC02MTM2NjA4OCwtNDAzMTE1Mjk3LC0yMDQ3NDk0Mzkx
 LDYwODQzNDkxMCwtMTg3MTQzMTU4NCwtODA5NTAwMzUwLC0xNj
 A4NzI5NjY1LDIzNDQ3MjE0NywyMDQ5MTk1OTEyLDE1MTI4NjE2
