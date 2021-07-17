@@ -11,8 +11,12 @@ TV denoising finds the unique solution <img src="https://latex.codecogs.com/svg.
 
 where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathbf{y}&space;\in&space;\mathbb{R}^{M&space;\times&space;N}" title="\large \mathbf{y} \in \mathbb{R}^{M \times N}" /> is the observed image, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\lambda" title="\large \lambda" /> is a regularisation parameter that balances the two terms, and <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\left\Vert&space;\mathbf{x}&space;\right\Vert_{\text{TV}}" title="\large \left\Vert \mathbf{x} \right\Vert_{\text{TV}}" /> is the total variation which is defined below
 
+<img src="https://latex.codecogs.com/svg.latex?\large&space;\left\Vert&space;\mathbf{x}&space;\right\Vert_{\text{TV}}&space;=&space;\left\Vert&space;\mathrm{D}&space;\mathbf{x}&space;\right\Vert_{p,1}&space;=&space;\sum_{i=1,j=1}^{M,N}&space;\left|&space;\left(&space;\mathrm{D}&space;\mathbf{x}&space;\right)_{i,j}&space;\right|_p&space;=&space;\sum_{i=1,j=1}^{M,N}&space;\left(&space;\left(&space;\mathrm{D}&space;\mathbf{x}&space;\right)_{i,j,1}^p&space;&plus;&space;\left(&space;\mathrm{D}&space;\mathbf{x}&space;\right)_{i,j,2}^p&space;\right)^{1/p}" title="\large \left\Vert \mathbf{x} \right\Vert_{\text{TV}} = \left\Vert \mathrm{D} \mathbf{x} \right\Vert_{p,1} = \sum_{i=1,j=1}^{M,N} \left| \left( \mathrm{D} \mathbf{x} \right)_{i,j} \right|_p = \sum_{i=1,j=1}^{M,N} \left( \left( \mathrm{D} \mathbf{x} \right)_{i,j,1}^p + \left( \mathrm{D} \mathbf{x} \right)_{i,j,2}^p \right)^{1/p}" />
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMjg2MTY1NSwtMjE0NzM1NTgsLTE5MD
-g2MTQ3MTIsLTI2NjI3NDk5MSwxMzY5OTk4NTc1LC0xNzY5NjEx
-Mzc5LC0xNzU3ODU5MDkwLC0yNDY2MTc3ODJdfQ==
+eyJoaXN0b3J5IjpbMzM1NTQxODkxLDE1MTI4NjE2NTUsLTIxND
+czNTU4LC0xOTA4NjE0NzEyLC0yNjYyNzQ5OTEsMTM2OTk5ODU3
+NSwtMTc2OTYxMTM3OSwtMTc1Nzg1OTA5MCwtMjQ2NjE3NzgyXX
+0=
 -->
