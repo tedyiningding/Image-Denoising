@@ -15,13 +15,13 @@ where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;
 
 where <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\mathrm{D}:&space;\mathbb{R}^{M&space;\times&space;N}&space;\rightarrow&space;\mathbb{R}^{M&space;\times&space;N&space;\times&space;2}" title="\large \mathrm{D}: \mathbb{R}^{M \times N} \rightarrow \mathbb{R}^{M \times N \times 2}" /> is the discrete gradient operator. That is, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\left\Vert&space;\cdot&space;\right\Vert_{\text{TV}}" title="\large \left\Vert \cdot \right\Vert_{\text{TV}}" /> is the <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\ell_1" title="\large \ell_1" />-norm  of the <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;p" title="\large p" />-norm of the pixelwise image gradients [1, pp. 168]. When <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;p=1" title="\large p=1" /> it is called the anisotropic TV, whereas when <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;p=2" title="\large p=2" /> it is called the isotropic TV, which is used here.
 
-The code solves the problem using the over relaxed  algorithm with relaxation
+The code solves the problem using the over-relaxed Chambolle-Pock algorithm [2]
 
 ## References
 - A. Chambolle and T. Pock, “An introduction to continuous optimization for imaging,” _Acta Numer._, vol. 25, pp. 161–319, 2016.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mjc5NTIxNjEsLTgwOTUwMDM1MCwtMT
+eyJoaXN0b3J5IjpbLTE4NzE0MzE1ODQsLTgwOTUwMDM1MCwtMT
 YwODcyOTY2NSwyMzQ0NzIxNDcsMjA0OTE5NTkxMiwxNTEyODYx
 NjU1LC0yMTQ3MzU1OCwtMTkwODYxNDcxMiwtMjY2Mjc0OTkxLD
 EzNjk5OTg1NzUsLTE3Njk2MTEzNzksLTE3NTc4NTkwOTAsLTI0
