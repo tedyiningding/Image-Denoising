@@ -25,8 +25,7 @@ The clear image | The noisy image
 :-:|:-:
 ![clear](https://github.com/tedyiningding/Image-Denoising/blob/main/images/gray.png?raw=true) | ![noisy](https://github.com/tedyiningding/Image-Denoising/blob/main/images/noisy_gray.png?raw=true)
 TV denoised image | TGV denoised image
-:-:|:-:
-![clear](https://github.com/tedyiningding/Image-Denoising/blob/main/images/gray.png?raw=true) | ![noisy](https://github.com/tedyiningding/Image-Denoising/blob/main/images/noisy_gray.png?raw=true)
+![clear](https://github.com/tedyiningding/Image-Denoising/blob/main/images/TVdenoised_gray.png?raw=true) | ![noisy](https://github.com/tedyiningding/Image-Denoising/blob/main/images/TGVdenoised_gray.png?raw=true)
 
 
 ## References
@@ -35,7 +34,7 @@ TV denoised image | TGV denoised image
 - [3] L. Condat, “A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms,” _J. Optim. Theory Appl._, vol. 158, no. 2, pp. 460–479, 2013.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NzgxNDQyNywtMjA0NzQ5NDM5MSw2MD
+eyJoaXN0b3J5IjpbLTc4NzMwNDAyMywtMjA0NzQ5NDM5MSw2MD
 g0MzQ5MTAsLTE4NzE0MzE1ODQsLTgwOTUwMDM1MCwtMTYwODcy
 OTY2NSwyMzQ0NzIxNDcsMjA0OTE5NTkxMiwxNTEyODYxNjU1LC
 0yMTQ3MzU1OCwtMTkwODYxNDcxMiwtMjY2Mjc0OTkxLDEzNjk5
