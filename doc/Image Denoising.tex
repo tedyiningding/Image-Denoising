@@ -208,13 +208,13 @@ And therefore\\
 V^\top\]
 
 \subsection*{Results comparison} \label{sec:results_colour}
-Qualitative results are shown in Figure \ref{fig:colour_comparison}. We also show some quantitative results including the reconstructed signal-to-noise ratio (RSNR) and the structural similarity index measure (SSIM) in Table \ref{tab:colour_metrics}.
+Qualitative results are shown in Figure \ref{fig:colour_comparison}. We also show the RSNR results in Table \ref{tab:colour_metrics}.
 
-\begin{figure}[htbp]     
+\begin{figure}[ht]     
     \centering
     \begin{subfigure}[b]{0.24\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{images/gray.png}
+        \includegraphics[width=\textwidth]{images/colour.png}
         \caption{The original image}
         \label{fig:colour}
     \end{subfigure}
@@ -230,47 +230,85 @@ Qualitative results are shown in Figure \ref{fig:colour_comparison}. We also sho
     \begin{subfigure}[b]{0.24\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/TNVdenoised_colour.png}
-        \caption{TNV denoised image}
+        \caption{TNV denoised}
         \label{fig:TNVdenoised_colour}
     \end{subfigure}
     %\hfill
     \begin{subfigure}[b]{0.24\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{images/TGVdenoised_gray.png}
-        \caption{TGV denoised image}
-        \label{fig:TFVdenoised_colour}
+        \includegraphics[width=\textwidth]{images/FrobeniusNormdenoised_colour.png}
+        \caption{Frobenius norm denoised}
+        \label{fig:FrobeniusNormdenoised_colour}
     \end{subfigure}
     %\hfill
     \begin{subfigure}[b]{0.24\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{images/TGVdenoised_gray.png}
-        \caption{TGV denoised image}
-        \label{fig:TVdenoised_colour}
+        \includegraphics[width=\textwidth]{images/ChannelwiseTVdenoised_colour.png}
+        \caption{Channel-wise TV denoised}
+        \label{fig:ChannelwiseTVdenoised_colour}
     \end{subfigure}
     \vspace{.3cm}
 
-    \caption{colour image denoising comparison}
+    \caption{Colour image denoising comparison}
     \label{fig:colour_comparison}
 \end{figure}
 
-\begin{table}[htbp]
+\begin{table}[ht]
     \centering
     \begin{tabular}{| l | l | l |} 
         \hline
         \textbf{Images} & \textbf{RSNR (dB)} \\ [0.5ex] 
         \hline\hline
-        Noisy &  \\ 
+        Noisy & 14.1294 \\ 
         \hline
-        TNV denoised &  \\
+        TNV denoised & 24.3723 \\
         \hline
-        Frobenius norm denoised &  \\
+        Frobenius norm denoised & 24.1266 \\
         \hline
-        TV individually denoised &  \\
+        Channel-wise TV denoised & 23.0542 \\
         \hline
     \end{tabular}
     \caption{Colour image error metrics}
     \label{tab:colour_metrics}
 \end{table}
+
+We can see that the TNV denoised has the highest RSNR, which is slightly higher than the one denoised by Frobenius norm. Channel-wise applying TV denoising without considering any coupling between the channels gives the lowest RSNR. In Figure \ref{fig:colour_comparison_zoomed} we show a close-up comparison on a patch of the image with detailed textures.
+
+\begin{figure}[ht]     
+    \centering
+    \begin{subfigure}[b]{0.24\textwidth}
+        \centering
+        \includegraphics[scale=2.5,trim={80 117 78 45},clip=true]{images/colour.png}
+        \caption{The original image}
+        \label{fig:Zoomedcolour}
+    \end{subfigure}
+    %\hfill
+    \begin{subfigure}[b]{0.24\textwidth}
+        \centering
+        \includegraphics[scale=2.5,trim={80 117 78 45},clip=true]{images/TNVdenoised_colour.png}
+        \caption{TNV denoised}
+        \label{fig:ZoomedTNVdenoised_colour}
+    \end{subfigure}
+    %\hfill
+    \begin{subfigure}[b]{0.24\textwidth}
+        \centering
+        \includegraphics[scale=2.5,trim={80 117 78 45},clip=true]{images/FrobeniusNormdenoised_colour.png}
+        \caption{Frobenius norm denoised}
+        \label{fig:ZoomedFrobeniusNormdenoised_colour}
+    \end{subfigure}
+    %\hfill
+    \begin{subfigure}[b]{0.24\textwidth}
+        \centering
+        \includegraphics[scale=2.5,trim={80 117 78 45},clip=true]{images/ChannelwiseTVdenoised_colour.png}
+        \caption{Channel-wise TV denoised}
+        \label{fig:ZoomedChannelwiseTVdenoised_colour}
+    \end{subfigure}
+    \vspace{.3cm}
+
+    \caption{Colour image denoising detailed comparison}
+    \label{fig:colour_comparison_zoomed}
+\end{figure}
+
 
 \bibliographystyle{ieeetr}
 \bibliography{bib} \label{bib}
