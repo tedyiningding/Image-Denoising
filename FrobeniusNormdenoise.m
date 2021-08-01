@@ -44,7 +44,7 @@ function main
     
     addpath('utils\')
 
-	Nbiter= 1000;	% number of iterations
+	Nbiter= 800;	% number of iterations
 	lambda = 0.12; 	% regularization parameter
 	tau = 0.005;		% proximal parameter >0; influences the
 		% convergence speed
@@ -65,7 +65,7 @@ function main
 	figure(3);
 	imshow(xsol);
     title('TNV denoised image');
-    imwrite(xsol,'images\TNVdenoised_colour.png');
+    imwrite(xsol,'images\FrobeniusNormdenoised_colour.png');
     
     fprintf('noisy image: RSNR = %.4f dB\n',calcRSNR(y,x0));
     fprintf('TNV denoised image: RSNR = %.4f dB\n',calcRSNR(xsol,x0));
@@ -94,7 +94,7 @@ function x = TNVdenoising(y,lambda,tau,Nbiter)
 		x2 = x2+rho*(x-x2);
 		u2 = u2+rho*(u-u2);
 		if mod(iter,25)==0
-            primalcost = sum(sum(sum((x-y).^2)))/2+lambda*nucnorm(opD(x));
+            primalcost = sum(sum(sum((x-y).^2)))/2+lambda*fronorm(opD(x));
             dualcost = cy-sum(sum(sum((y-opDadj(u)).^2)))/2;
 				% best value of dualcost computed so far:
 			primalcostlowerbound = max(primalcostlowerbound,dualcost);
@@ -108,15 +108,8 @@ function x = TNVdenoising(y,lambda,tau,Nbiter)
 	end
 end
 
-function val = nucnorm(y)
-	s = diff(sum(y.^2,3),1,4);                                  % MxN
-	theta = atan2(2*dot(y(:,:,:,1),y(:,:,:,2),3),-s)/2;         % MxN
-	c = cos(theta);                                             % MxN
-	s = sin(theta);                                             % MxN
-	val = sum(sum(sqrt(sum((bsxfun(@times,y(:,:,:,1),c)+...     % scalar
-		bsxfun(@times,y(:,:,:,2),s)).^2,3)),2),1)+...
-		sum(sum(sqrt(sum((bsxfun(@times,y(:,:,:,2),c)-...
-		bsxfun(@times,y(:,:,:,1),s)).^2,3)),2),1);
+function val = fronorm(y)
+    val = sum(sqrt(sum(y.^2,[3 4])),'all');
 end
 
 function u = prox_sigma_g_conj(y, lambda)
@@ -127,7 +120,8 @@ function u = prox_sigma_g_conj(y, lambda)
     x = cat(4,bsxfun(@times,y(:,:,:,1),c)+bsxfun(@times,y(:,:,:,2),s),...
 		bsxfun(@times,y(:,:,:,2),c)-bsxfun(@times,y(:,:,:,1),s));               % MxNx3x2 (U*S)
     S = sqrt(sum(x.^2,3));                      % MxNx1x2 (the norm of the two columns are the two sigular values)
-    tmp = min(S, lambda);                       % MxNx1x2 
+    SN = sqrt(sum(S.^2,4));                     % MxNx1x1
+    tmp = S.*min(lambda./SN,1);                 % MxNx1x2 (Frobenius)
     tmp = bsxfun(@times, x./(S+eps), tmp);      % MxNx3x2 (each column's norm gets rescaled)
     u = cat(4,bsxfun(@times,tmp(:,:,:,1),c)-bsxfun(@times,tmp(:,:,:,2),s),...
 		bsxfun(@times,tmp(:,:,:,2),c)+bsxfun(@times,tmp(:,:,:,1),s));           % MxNx3x2
@@ -136,7 +130,7 @@ end
 
 % The following codes do the same job but are much slower
 
-% function val = nucnorm(y)
+% function val = fronorm(y)
 %     M = size(y,1);
 %     N = size(y,2);
 %     val = zeros(M,N);
@@ -144,7 +138,7 @@ end
 %         for n = 1:N
 %             P_mn = squeeze(y(m,n,:,:));   % 3-by-2
 %             [~,S,~] = svd(P_mn,'econ');
-%             val(m,n) = sum(diag(S));
+%             val(m,n) = norm(diag(S));
 %         end
 %     end
 %     val = sum(val,'all');
@@ -157,9 +151,10 @@ end
 %         for n = 1:N
 %             P_mn = squeeze(y(m,n,:,:));   % 3-by-2
 %             [U,S,V] = svd(P_mn,'econ');
-%             S_lambda = diag(min(diag(S),lambda));
-%             P_mn = U*S_lambda*V';
-%             u(m,n,:,:) = reshape(P_mn,1,1,size(P_mn,1),size(P_mn,2));
+%             s = diag(S);
+%             S_lambda = diag(s.*min(lambda./norm(s),1));
+%             P_lambda_mn = U*S_lambda*V';
+%             u(m,n,:,:) = reshape(P_lambda_mn,1,1,size(P_lambda_mn,1),size(P_lambda_mn,2));
 %         end
 %     end
 % end
