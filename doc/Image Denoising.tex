@@ -207,7 +207,7 @@ And therefore\\
 \end{bmatrix}
 V^\top\]
 
-\subsection*{Results comparison} \label{sec:results_gray}
+\subsection*{Results comparison} \label{sec:results_colour}
 Qualitative results are shown in Figure \ref{fig:colour_comparison}. We also show some quantitative results including the reconstructed signal-to-noise ratio (RSNR) and the structural similarity index measure (SSIM) in Table \ref{tab:colour_metrics}.
 
 \begin{figure}[htbp]     
@@ -252,6 +252,25 @@ Qualitative results are shown in Figure \ref{fig:colour_comparison}. We also sho
     \caption{colour image denoising comparison}
     \label{fig:colour_comparison}
 \end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{| l | l | l |} 
+        \hline
+        \textbf{Images} & \textbf{RSNR (dB)} \\ [0.5ex] 
+        \hline\hline
+        Noisy &  \\ 
+        \hline
+        TNV denoised &  \\
+        \hline
+        Frobenius norm denoised &  \\
+        \hline
+        TV individually denoised &  \\
+        \hline
+    \end{tabular}
+    \caption{Colour image error metrics}
+    \label{tab:colour_metrics}
+\end{table}
 
 \bibliographystyle{ieeetr}
 \bibliography{bib} \label{bib}
