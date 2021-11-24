@@ -49,31 +49,41 @@ function main
 	tau = 0.005;		% proximal parameter >0; influences the
 		% convergence speed
 	
+    figure;
+
     x0 = double(imread('images\colour.png'))/255;   % Initial image
-	figure(1);
+	subplot(221);
 	imshow(x0);
     title('clean image')
     
 	rng(0);
 	y = x0+randn(size(x0))*0.1; % white Gaussian noise added to the image
-	figure(2);
+	subplot(222);
 	imshow(y);
     title('noisy image');
     imwrite(y,'images\noisy_colour.png');
     
-	xsol = TNVdenoising(y,lambda,tau,Nbiter);
-	figure(3);
+	[xsol, primal_cost, dual_cost] = TNVdenoising(y,lambda,tau,Nbiter);
+	subplot(223);
 	imshow(xsol);
     title('TNV denoised image');
     imwrite(xsol,'images\FrobeniusNormdenoised_colour.png');
     
+    subplot(224);
+    plot(primal_cost);
+    xlabel('iteration');
+    grid on;
+    hold on;
+    plot(dual_cost)
+    title('Primal and dual cost');
+
     fprintf('noisy image: RSNR = %.4f dB\n',calcRSNR(y,x0));
     fprintf('TNV denoised image: RSNR = %.4f dB\n',calcRSNR(xsol,x0));
 
 end
 
 
-function x = TNVdenoising(y,lambda,tau,Nbiter)
+function [x, primal_cost, dual_cost] = TNVdenoising(y,lambda,tau,Nbiter)
 	
 	rho = 1.99;		% relaxation parameter, in [1,2)
 	sigma = 1/tau/8; % proximal parameter
@@ -86,24 +96,20 @@ function x = TNVdenoising(y,lambda,tau,Nbiter)
 	x2 = y; 		% Initialization of the solution
 	u2 = zeros([size(y) 2]); % Initialization of the dual solution
 	cy = sum(sum(sum(y.^2)))/2;
-	primalcostlowerbound = 0;
-		
+	
+    primal_cost = NaN(1, Nbiter);
+    dual_cost = NaN(1, Nbiter);
+
 	for iter = 1:Nbiter
 		x = prox_tau_f(x2-tau*opDadj(u2));
         u = prox_sigma_g_conj(u2+sigma*opD(2*x-x2),lambda);
 		x2 = x2+rho*(x-x2);
 		u2 = u2+rho*(u-u2);
+        primal_cost(iter) = sum(sum(sum((x-y).^2)))/2 + lambda*fronorm(opD(x));
+        dual_cost(iter) = cy - sum(sum(sum((y-opDadj(u)).^2)))/2;
+
 		if mod(iter,25)==0
-            primalcost = sum(sum(sum((x-y).^2)))/2+lambda*fronorm(opD(x));
-            dualcost = cy-sum(sum(sum((y-opDadj(u)).^2)))/2;
-				% best value of dualcost computed so far:
-			primalcostlowerbound = max(primalcostlowerbound,dualcost);
-				% The gap between primalcost and primalcostlowerbound is even better
-				% than between primalcost and dualcost to monitor convergence. 
-			fprintf('nb iter:%4d  %f  %f  %e\n',iter,primalcost,...
-				primalcostlowerbound,primalcost-primalcostlowerbound);
-			figure(3);
-			imshow(x);
+			fprintf('nb iter:%4d  %f  %f\n',iter,primal_cost(iter),dual_cost(iter));
 		end
 	end
 end
