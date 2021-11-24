@@ -41,30 +41,40 @@ function main
 	lambda1 = 1/9;	% regularization parameter
 	tau = 0.01;		% proximal parameter > 0; influences the convergence speed (i.e. primal step size)
     
+    figure;
+
     x0 = double(imread('images\gray.png'))/255;   % Initial image
-	figure(1);
+	subplot(221);
 	imshow(x0);
     title('clean image')
     
 	rng(0);
 	y = x0+randn(size(x0))*0.1; % white Gaussian noise added to the image
-	figure(2);
+	subplot(222);
 	imshow(y);
     title('noisy image');
-	imwrite(y,'images\noisy_gray.png');
+	imwrite(y,'images\noisy_gray.png');  
     
-    xsol = TGVdenoising_TD(y,lambda0,lambda1,tau,Nbiter);
-	figure(3);
+    [xsol, primal_cost, dual_cost] = TGVdenoising_TD(y,lambda0,lambda1,tau,Nbiter);
+	subplot(223);
 	imshow(xsol);
     title('TGV denoised image');
     imwrite(xsol,'images\TGVdenoised_gray.png');
     
+    subplot(224);
+    plot(primal_cost);
+    xlabel('iteration');
+    grid on;
+    hold on;
+    plot(dual_cost)
+    title('Primal and dual cost');
+
     fprintf('noisy image: RSNR = %.4f dB, SSIM = %.4f\n',calcRSNR(y,x0),ssim(y,x0));
     fprintf('TGV denoised image: RSNR = %.4f dB, SSIM = %.4f\n',calcRSNR(xsol,x0),ssim(xsol,x0));
 end
 
 
-function u = TGVdenoising_TD(y,lambda0,lambda1,tau,Nbiter)
+function [u, primal_cost, dual_cost] = TGVdenoising_TD(y,lambda0,lambda1,tau,Nbiter)
     
     rho = 1.99;		% relaxation parameter, in [1,2)
 	sigma = 1/tau/72; % the dual step size
@@ -87,9 +97,9 @@ function u = TGVdenoising_TD(y,lambda0,lambda1,tau,Nbiter)
     p2 = zeros([H,W,2]);	% Initialization of the dual solution p
 	q2 = zeros([H,W,4]);	% Initialization of the dual solution q
     
-	cy = sum(sum(y.^2))/2;
-	primalcostlowerbound = 0;
-    
+    primal_cost = NaN(1, Nbiter);
+    dual_cost = NaN(1, Nbiter);
+
     for iter = 1:Nbiter
         
         % primal updates
@@ -108,30 +118,14 @@ function u = TGVdenoising_TD(y,lambda0,lambda1,tau,Nbiter)
 		p2 = p2 + rho*(p-p2);
         q2 = q2 + rho*(q-q2);
         
-        if mod(iter,25)==0
-			primalcost = norm(u-y,'fro')^2/2+...
+        % evaluate cost values
+        primal_cost(iter) = sum((u-y).^2,'all')/2+...
 				lambda0*sum(sum(sqrt(sum(opJ(v).^2,3))))+...
-				lambda1*sum(sum(sqrt(sum((opD(u)-v).^2,3))));		
-			dualcost = cy-sum(sum((y-opDadj(opJadj(q))).^2))/2;
-			tmp = max(max(sqrt(sum(opJadj(q).^2,3))));
-			  % the value tmp is to check feasibility: the value will be
-			  % <= lambda1 only at convergence. Since u is not feasible,
-			  % the dual cost is not reliable: the gap=primalcost-dualcost
-			  % can be <0 and cannot be used as stopping criterion.
-			q3=q/max(tmp/lambda0,1);
-			  % q3 is a scaled version of u, which is feasible.
-			  % so, its dual cost is a valid, but very rough lower bound
-			  % of the primal cost. 
-			dualcost2 = cy-sum(sum((y-opDadj(opJadj(q3))).^2))/2;
-			  % we display the best value of dualcost2 computed so far.
-			primalcostlowerbound = max(primalcostlowerbound,dualcost2);
-			  % The gap between primalcost and primalcostlowerbound tends 
-			  % to zero but does not tell much about convergence, since x 
-			  % converges much faster than u3.
-			fprintf('nb iter:%4d  %f  %f  %f  %f\n',iter,primalcost,...
-				dualcost,primalcostlowerbound,tmp);
-			figure(3);
-			imshow(u);
+				lambda1*sum(sum(sqrt(sum((opD(u)-v).^2,3))));
+        dual_cost(iter) = 0.5*sum((cat(3,y,zeros([H,W,2]))).^2,'all') ...
+                        - 0.5*sum((cat(3,y,zeros([H,W,2]))-cat(3,opDadj(p),opJadj(q)-p)).^2,'all');
+        if mod(iter,25)==0
+			fprintf('nb iter:%4d  %f  %f\n',iter,primal_cost(iter),dual_cost(iter));
         end
         
     end
