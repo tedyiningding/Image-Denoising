@@ -66,7 +66,7 @@ function main
 	[xsol, primal_cost, dual_cost] = TNVdenoising(y,lambda,tau,Nbiter);
 	subplot(223);
 	imshow(xsol);
-    title('TNV denoised image');
+    title('Nuclear norm denoised image');
     imwrite(xsol,'images\TNVdenoised_colour.png');
     
     subplot(224);
@@ -78,7 +78,7 @@ function main
     title('Primal and dual cost');
 
     fprintf('noisy image: RSNR = %.4f dB\n',calcRSNR(y,x0));
-    fprintf('TNV denoised image: RSNR = %.4f dB\n',calcRSNR(xsol,x0));
+    fprintf('Nuclear norm denoised image: RSNR = %.4f dB\n',calcRSNR(xsol,x0));
 
 end
 

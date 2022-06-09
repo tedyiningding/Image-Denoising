@@ -66,7 +66,7 @@ function main
 	[xsol, primal_cost, dual_cost] = TSVdenoising(y,lambda,tau,Nbiter);
 	subplot(223);
 	imshow(xsol);
-    title('TNV denoised image');
+    title('Spectral norm denoised image');
     imwrite(xsol,'images\SpectralNormdenoised_colour.png');
     
     subplot(224);
